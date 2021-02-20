@@ -40,7 +40,7 @@ def run():
         valid_dataset, batch_size=config.VALID_BATCH_SIZE, num_workers=1
     )
 
-    device = torch.device(config.DEVICE)
+    device = torch.device("cuda")
     model = BERTBaseUncased()
     model.to(device)
 
